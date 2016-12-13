@@ -11,7 +11,5 @@ $(document).ready(function() {
         ctx.fillStyle = pat;
         ctx.fill();
     };
-
-    drawPattern();
-
+    setTimeout(drawPattern, 500);
 });
