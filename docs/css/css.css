@@ -3,9 +3,8 @@ html {
     background-color: #383042;
 }
 
-canvas#sweater-canvas {
-    height: 19px;
-    width: 190px;
+#sweater,
+#sweater-container {
     padding: 0;
     margin: auto;
     display: block;
@@ -14,5 +13,18 @@ canvas#sweater-canvas {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: white;
+}
+
+#sweater-container {
+    width: 850px;
+    height: 1000px;
+    background: url("/img/sweatshirt-blank-mirrored.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#sweater {
+    width: 530px;
+    height: 740px;
 }
