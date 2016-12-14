@@ -1,6 +1,14 @@
 body,
 html {
     background-color: #383042;
+    margin: 0;
+    padding: 0;
+}
+
+#squarer {
+    width: 100%;
+    padding-bottom: 85%;
+    position: relative;
 }
 
 #sweater-container {
@@ -64,4 +72,5 @@ html {
     background-repeat: repeat-x;
     background-position: center center;
     background-size: contain;
+    text-align: center;
 }
