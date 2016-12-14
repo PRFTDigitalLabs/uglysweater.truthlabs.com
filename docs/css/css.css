@@ -68,10 +68,15 @@ html {
 
 .band {
     height: 50%;
-    background: url("/img/pattern1.png");
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQklEQVQoU5WQ0QoAQAQEx/9/tMsVoUtu3zB2QwAFhFnqwATfWXZ6wdHrkRkuiwZ2J6tNJe0LzPeO0Q6ujlm9Z/XwA4kyFgdtHM9NAAAAAElFTkSuQmCC");
     background-repeat: repeat-x;
     background-position: center center;
     background-size: contain;
     text-align: center;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
     image-rendering: pixelated;
 }
