@@ -1,13 +1,16 @@
 $(document).ready(function() {
-
     var settings = {
-        xlength: 11,
-        ylength: 11
+        width: 11,
+        height: 11,
+        bands: 4,
+        bandPct: 50,
+        mono: true,
+        alpha: false
     };
 
-    var matrix = new Array(settings.xlength);
+    var matrix = new Array(settings.width);
     for (var i = 0; i < matrix.length; i++) {
-        matrix[i] = new Array(settings.ylength);
+        matrix[i] = new Array(settings.height);
     }
 
     var patcanvas = $('#patcanvas')[0];
@@ -15,7 +18,17 @@ $(document).ready(function() {
 
     init = function() {
         randomMatrix();
-        redrawPreview();
+    };
+
+    setSettings = function() {
+        $.each($('#control-panel').serializeArray(), function(i, field) {
+            settings[field.name] = parseInt(field.value);
+        });
+
+        settings.mono = $('#control-panel #mono')[0].checked ? true : false;
+        settings.alpha = $('#control-panel #alpha')[0].checked ? true : false;
+
+        init();
     };
 
     getRandomIntInclusive = function(min, max) {
@@ -25,12 +38,15 @@ $(document).ready(function() {
     }
 
     randomMatrix = function() {
+        matrix = new Array(settings.width);
+        for (var i = 0; i < matrix.length; i++) {
+            matrix[i] = new Array(settings.height);
+        }
+
         for (var i = 0; i < matrix.length; i++) {
             for (var j = 0; j < matrix[i].length; j++) {
                 var rValue = new Array(4);
-                //var hue = getRandomIntInclusive(0, 255);
                 for (k = 0; k < rValue.length - 1; k++) {
-                    //rValue[k] = hue;
                     rValue[k] = getRandomIntInclusive(0, 255);
                 }
                 //fade:
@@ -40,19 +56,20 @@ $(document).ready(function() {
                 matrix[i][j] = rValue;
             }
         }
+        redrawPreview();
     };
 
     redrawPreview = function() {
-        patcanvas.width = settings.xlength;
-        patcanvas.height = settings.ylength;
+        patcanvas.width = settings.width;
+        patcanvas.height = settings.height;
         reflectcanvas.width = patcanvas.width * 2;
         reflectcanvas.height = patcanvas.height * 2;
 
         var patcontext = patcanvas.getContext('2d');
         var reflectcontext = reflectcanvas.getContext('2d');
 
-        for (var i = 0; i < settings.xlength; i++) {
-            for (var j = 0; j < settings.ylength; j++) {
+        for (var i = 0; i < settings.width; i++) {
+            for (var j = 0; j < settings.height; j++) {
                 if (matrix[i][j] != 0) {
                     var tileColor = matrix[i][j];
                     patcontext.fillStyle = "rgba(" + tileColor[0] + ", " + tileColor[1] + ", " + tileColor[2] + ", " + tileColor[3] + ")";
@@ -71,10 +88,18 @@ $(document).ready(function() {
         reflectcontext.scale(1, -1);
         reflectcontext.drawImage(reflectcanvas, 0, 0);
 
-        //also update the code
+        $("#pattern-area").empty();
+
+        for (i = 0; i < settings.bands; i++) {
+            $("#pattern-area").append('<div class="band-container"><div class="band-positioner"><div class="band"></div></div></div>');
+        }
+
         var dataURL = reflectcanvas.toDataURL("image/png");
         $('.band').css('background-image', 'url(' + dataURL + ')');
+        $('.band').css('height', settings.bandPct + '%');
     };
+
+    $('#control-panel').on('change', setSettings);
 
     init();
 });

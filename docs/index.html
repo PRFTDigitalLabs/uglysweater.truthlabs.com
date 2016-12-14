@@ -39,34 +39,32 @@
 </head>
 
 <body>
-    <div id="flake-holder">
-        <canvas id="patcanvas"></canvas>
-        <canvas id="reflectcanvas"></canvas>
-    </div>
+    <form id="control-panel">
+        <div id="flake-holder">
+            <canvas id="patcanvas"></canvas>
+            <canvas id="reflectcanvas"></canvas>
+        </div>
+        <label for="width">
+            Pattern Width<br/>
+            <input id="width" name="width" type="range" min="1" max="20" value="8"></label><br/>
+        <label for="height">
+            Pattern Height<br/>
+            <input id="height" name="height" type="range" min="1" max="20" value="8"></label><br/>
+        <label for="bands">
+            # of Bands<br/>
+            <input id="bands" name="bands" type="range" min="1" max="10" value="4"></label><br/>
+        <label for="bandPct">
+            Band %<br/>
+            <input id="bandPct" name="bandPct" type="range" min="1" max="100" value="50"></label></br>
+        <label for="mono">
+            <input id="mono" name="mono" type="checkbox" checked>Monochrome?</label><br/>
+        <label for="alpha">
+            <input id="alpha" name="alpha" type="checkbox">Fade?</label><br/>
+        <button id="refresh" name="refresh">re-stitch</button>
+    </form>
     <div id="squarer">
         <div id="sweater-container">
-            <div id="pattern-area">
-                <div class="band-container">
-                    <div class="band-positioner">
-                        <div class="band"></div>
-                    </div>
-                </div>
-                <div class="band-container">
-                    <div class="band-positioner">
-                        <div class="band"></div>
-                    </div>
-                </div>
-                <div class="band-container">
-                    <div class="band-positioner">
-                        <div class="band"></div>
-                    </div>
-                </div>
-                <div class="band-container">
-                    <div class="band-positioner">
-                        <div class="band"></div>
-                    </div>
-                </div>
-            </div>
+            <div id="pattern-area"></div>
             <div id="mask-overlay"></div>
         </div>
     </div>
@@ -86,6 +84,9 @@
         ga('create', 'UA-78974568-3', 'auto');
         ga('send', 'pageview');
     </script>
+</body>
+
+</html>
 </body>
 
 </html>
