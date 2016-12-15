@@ -91,8 +91,8 @@ $(document).ready(function() {
     drawPattern = function() {
         patcanvas.width = settings.width;
         patcanvas.height = settings.height;
-        reflectcanvas.width = patcanvas.width * 2;
-        reflectcanvas.height = patcanvas.height * 2;
+        reflectcanvas.width = (patcanvas.width - 1) * 2;
+        reflectcanvas.height = (patcanvas.height - 1) * 2;
 
         var patcontext = patcanvas.getContext('2d');
         var reflectcontext = reflectcanvas.getContext('2d');
@@ -108,12 +108,12 @@ $(document).ready(function() {
         }
 
         reflectcontext.drawImage(patcanvas, 0, 0);
-        reflectcontext.translate(reflectcanvas.width, 0);
+        reflectcontext.translate(reflectcanvas.width - 1, 0);
         reflectcontext.scale(-1, 1);
         reflectcontext.drawImage(patcanvas, 0, 0);
         reflectcontext.scale(1, 1);
         reflectcontext.translate(0, 0);
-        reflectcontext.translate(0, reflectcanvas.height);
+        reflectcontext.translate(0, reflectcanvas.height - 1);
         reflectcontext.scale(1, -1);
         reflectcontext.drawImage(reflectcanvas, 0, 0);
 
