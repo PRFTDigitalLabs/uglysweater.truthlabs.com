@@ -77,7 +77,7 @@ html {
 
 .band {
     height: 50%;
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQklEQVQoU5WQ0QoAQAQEx/9/tMsVoUtu3zB2QwAFhFnqwATfWXZ6wdHrkRkuiwZ2J6tNJe0LzPeO0Q6ujlm9Z/XwA4kyFgdtHM9NAAAAAElFTkSuQmCC");
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAPElEQVQoU2NkIBIwEqmOgfGZre1/ZMVShw/DxUBsmBzxCmE6YCbjNJEqCmGGgGyBOxab1VgVEgomosMRAKwjMAtoqEGrAAAAAElFTkSuQmCC");
     background-repeat: repeat-x;
     background-position: center center;
     background-size: contain;
