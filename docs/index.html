@@ -10,10 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
-    <title>Ugly Sweater Generator by: Truth Labs</title>
+    <title>Ugly Holiday Sweater Generator by: Truth Labs</title>
 
-    <meta name="title" content="Ugly Sweater Generator by: Truth Labs">
-    <meta name="description" content="Ugly Sweater Generator Experiment">
+    <meta name="title" content="Ugly Holiday Sweater Generator by: Truth Labs">
+    <meta name="description" content="Ugly Holiday Sweater Generator by: Truth Labs">
 
     <meta itemprop="url" content="http://uglysweater.truthlabs.com">
     <meta itemprop="logo" content="http://uglysweater.truthlabs.com/img/logo.png">
@@ -22,7 +22,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#383042">
     <meta name="application-name" content="uglysweater-truthlabs-com">
-    <meta name="apple-mobile-web-app-title" content="Ugly Sweater Generator">
+    <meta name="apple-mobile-web-app-title" content="Ugly Sweater">
     <meta name="msapplication-TileColor" content="#383042">
     <meta name="theme-color" content="#383042">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -31,10 +31,12 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#383042">
     <link rel="shortcut icon" href="favicon.ico">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#383042">
 
     <link rel="stylesheet" href="/css/css.css">
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//google.github.io/palette.js/palette.js"></script>
     <script src="/js/js.js"></script>
 </head>
 
@@ -55,11 +57,19 @@
             <input id="bands" name="bands" type="range" min="1" max="10" value="3"></label><br/>
         <label for="bandPct">
             Band %<br/>
-            <input id="bandPct" name="bandPct" type="range" min="1" max="100" value="75"></label></br>
-        <label for="mono">
-            <input id="mono" name="mono" type="checkbox" checked>Monochrome?</label><br/>
+            <input id="bandPct" name="bandPct" type="range" min="1" max="100" value="50"></label></br>
+        <label for="colors">
+            # of colors<br/>
+            <input id="colors" name="colors" type="range" min="1" max="100" value="8"></label></br>
+        <label for="empty">
+            Fill %<br/>
+            <input id="empty" name="empty" type="range" min="1" max="100" value="50"></label></br>
+        <label for="gray">
+            <input id="gray" name="gray" type="checkbox" checked>Grayscale?</label><br/>
+        <!--
         <label for="alpha">
             <input id="alpha" name="alpha" type="checkbox">Fade?</label><br/>
+        -->
         <button id="refresh" name="refresh">re-stitch</button>
     </form>
     <div id="squarer">
