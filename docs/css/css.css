@@ -1,14 +1,23 @@
 body,
 html {
-    background-color: #383042;
     margin: 0;
-    padding: 0;
 }
 
-#squarer {
-    width: 100%;
-    padding-bottom: 85%;
-    position: relative;
+body {
+    background-color: #fff;
+}
+
+.container {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    background-color: #CDEAE7;
+}
+
+#flake-holder {
+    display: none;
 }
 
 #sweater-container {
@@ -28,8 +37,8 @@ html {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    max-width: 768px;
-    max-height: 768px;
+    max-width: 400px;
+    max-height: 400px;
     width: 100%;
     height: 100%;
 }

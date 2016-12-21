@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -39,64 +38,59 @@
     <script src="//google.github.io/palette.js/palette.js"></script>
     <script src="/js/js.js"></script>
 </head>
-
 <body>
-    <form id="control-panel">
-        <div id="flake-holder">
-            <canvas id="patcanvas" width="10" height="10"></canvas>
-            <canvas id="reflectcanvas" width="20" height="20"></canvas>
-        </div>
-        <label for="width">
-            Pattern Width<br/>
-            <input id="width" name="width" type="range" min="1" max="20" value="10"></label><br/>
-        <label for="height">
-            Pattern Height<br/>
-            <input id="height" name="height" type="range" min="1" max="20" value="10"></label><br/>
-        <label for="bands">
-            # of Bands<br/>
-            <input id="bands" name="bands" type="range" min="1" max="10" value="3"></label><br/>
-        <label for="bandPct">
-            Band %<br/>
-            <input id="bandPct" name="bandPct" type="range" min="1" max="100" value="50"></label></br>
-        <label for="colors">
-            # of colors<br/>
-            <input id="colors" name="colors" type="range" min="1" max="100" value="8"></label></br>
-        <label for="empty">
-            Fill %<br/>
-            <input id="empty" name="empty" type="range" min="1" max="100" value="50"></label></br>
-        <label for="gray">
-            <input id="gray" name="gray" type="checkbox" checked>Grayscale?</label><br/>
-        <!--
-        <label for="alpha">
-            <input id="alpha" name="alpha" type="checkbox">Fade?</label><br/>
-        -->
-        <button id="refresh" name="refresh">re-stitch</button>
-    </form>
-    <div id="squarer">
+    <div class="container">
+        <form id="control-panel">
+            <div id="flake-holder">
+                <canvas id="patcanvas1" width="10" height="10"></canvas>
+                <canvas id="reflectcanvas1" width="20" height="20"></canvas>
+                <canvas id="patcanvas2" width="10" height="10"></canvas>
+                <canvas id="reflectcanvas2" width="20" height="20"></canvas>
+            </div>
+            <label for="width">
+                Pattern Width<br/>
+                <input id="width" name="width" type="range" min="1" max="20" value="6"></label><br/>
+            <label for="height">
+                Pattern Height<br/>
+                <input id="height" name="height" type="range" min="1" max="20" value="6"></label><br/>
+            <label for="bands">
+                # of Bands<br/>
+                <input id="bands" name="bands" type="range" min="1" max="10" value="3"></label><br/>
+            <label for="bandPct">
+                Band %<br/>
+                <input id="bandPct" name="bandPct" type="range" min="1" max="100" value="50"></label></br>
+            <label for="colors">
+                # of colors<br/>
+                <input id="colors" name="colors" type="range" min="1" max="100" value="4"></label></br>
+            <label for="empty">
+                Fill %<br/>
+                <input id="empty" name="empty" type="range" min="1" max="100" value="50"></label></br>
+            <label for="gray">
+                <input id="gray" name="gray" type="checkbox">Grayscale?</label><br/>
+
+            <button id="refresh" name="refresh">re-stitch</button>
+        </form>
+
         <div id="sweater-container">
             <div id="pattern-area"></div>
             <div id="mask-overlay"></div>
         </div>
     </div>
     <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-78974568-3', 'auto');
-        ga('send', 'pageview');
+    ga('create', 'UA-78974568-3', 'auto');
+    ga('send', 'pageview');
     </script>
 </body>
-
-</html>
-</body>
-
 </html>
