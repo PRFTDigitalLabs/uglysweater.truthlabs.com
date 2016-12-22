@@ -1,5 +1,6 @@
 body, html {
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -28,9 +29,9 @@ body {
     width: 448px;
     height: 400px;
     margin: auto;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
+    background-repeat: no-repeat;
     background-image: url("/img/sweater.png");
 
     image-rendering: optimizeSpeed;
@@ -43,7 +44,6 @@ body {
 }
 
 #pattern-area {
-    padding: 0;
     margin: auto;
     position: absolute;
     top: 70px;
@@ -61,7 +61,7 @@ body {
     top: 10px;
     left: 10px;
     z-index: 99;
-    background-color: white;
+    background-color: #fff;
     padding: 20px;
 }
 
@@ -75,11 +75,9 @@ body {
 }
 
 .band {
-    height: 50%;
-    background-repeat: repeat-x;
-    background-position: center center;
+    height: 44px;
     background-size: contain;
-    text-align: center;
+    background-repeat: repeat-x;
 
     image-rendering: optimizeSpeed;
     image-rendering: -moz-crisp-edges;

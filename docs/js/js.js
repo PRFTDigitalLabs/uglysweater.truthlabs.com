@@ -3,7 +3,6 @@ $(document).ready(function() {
         width: 6,
         height: 6,
         bands: 3,
-        bandPct: 50,
         colors: 4,
         empty: 50,
         gray: false
@@ -136,7 +135,6 @@ $(document).ready(function() {
 
         $('.band').css('background-image', 'url(' + dataURL[1] + ')');
         $('.band-container:nth-of-type(even) .band').css('background-image', 'url(' + dataURL[2] + ')');
-        $('.band').css('height', settings.bandPct + '%');
     };
 
     $('#control-panel').on('change', changeSettings);
