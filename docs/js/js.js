@@ -8,11 +8,6 @@ $(document).ready(function() {
         gray: false
     };
 
-    var matrix = new Array(settings.width);
-    for (var i = 0; i < matrix.length; i++) {
-        matrix[i] = new Array(settings.height);
-    }
-
     var dataURL = [],
         patcanvas = [],
         reflectcanvas = [];
@@ -65,33 +60,20 @@ $(document).ready(function() {
     };
 
     randomizePattern = function(num) {
-        buildMatrix();
+        matrix = [];
 
-        for (var i = 0; i < matrix.length; i++) {
-            for (var j = 0; j < matrix[i].length; j++) {
-                //randomly select color from palette:
+        for (var i = 0; i < settings.width; i++) {
+            matrix[i] = [];
+
+            for (var j = 0; j < settings.height; j++) {
                 var RGB = hexToRgb(colorPalette[Math.floor(Math.random() * colorPalette.length)]);
-                //choose alpha channel
-                var alphaPct = getRandomIntInclusive(settings.empty, 100) / 100;
+                var alpha = Math.random() >= (settings.empty / 100) ? 0 : 1;
 
-                if (settings.alpha) {
-                    alpha = alphaPct;
-                } else {
-                    alpha = Math.random() >= (settings.empty / 100) ? 0 : 1;
-                }
-
-                matrix[i][j] = new Array(RGB.r, RGB.g, RGB.b, alpha);
+                matrix[i][j] = [RGB.r, RGB.g, RGB.b, alpha];
             }
         }
 
         drawPattern(num);
-    };
-
-    buildMatrix = function() {
-        matrix = new Array(settings.width);
-        for (var i = 0; i < matrix.length; i++) {
-            matrix[i] = new Array(settings.height);
-        }
     };
 
     drawPattern = function(num) {
