@@ -103,11 +103,11 @@ $(document).ready(function() {
         $("#pattern-area").empty();
 
         for (i = 0; i < settings.bands; i++) {
-            $("#pattern-area").append('<div class="band-container"><div class="band-positioner"><div class="band"></div></div></div>');
+            $("#pattern-area").append('<div class="band-container"><div class="band-positioner"><img class="band"><img class="band"><img class="band"><img class="band"><img class="band"><img class="band"><img class="band"></div></div>');
         }
 
-        $('.band').css('background-image', 'url(' + dataURL[1] + ')');
-        $('.band-container:nth-of-type(even) .band').css('background-image', 'url(' + dataURL[2] + ')');
+        $('.band').attr('src', dataURL[1]);
+        $('.band-container:nth-of-type(even) .band').attr('src', dataURL[2]);
     };
 
     $('#control-panel').on('change', changeSettings);

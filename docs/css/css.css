@@ -26,11 +26,10 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    width: 448px;
-    height: 400px;
+    width: 450px;
     margin: auto;
     background-position: center;
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-image: url("/img/sweater.png");
 
@@ -49,8 +48,8 @@ body {
     top: 70px;
     right: 0;
     bottom: 0;
-    left: 0;
-    width: 302px;
+    left: 4px;
+    width: 308px;
     height: 270px;
     display: table;
     z-index: 1;
@@ -75,9 +74,7 @@ body {
 }
 
 .band {
-    height: 44px;
-    background-size: contain;
-    background-repeat: repeat-x;
+    width: 44px;
 
     image-rendering: optimizeSpeed;
     image-rendering: -moz-crisp-edges;
