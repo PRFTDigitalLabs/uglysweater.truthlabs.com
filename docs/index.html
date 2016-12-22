@@ -40,36 +40,18 @@
 </head>
 <body>
     <div class="container">
-        <form id="control-panel">
-            <div id="flake-holder">
-                <canvas id="patcanvas1" width="10" height="10"></canvas>
-                <canvas id="reflectcanvas1" width="20" height="20"></canvas>
-                <canvas id="patcanvas2" width="10" height="10"></canvas>
-                <canvas id="reflectcanvas2" width="20" height="20"></canvas>
-            </div>
-            <label for="width">
-                Pattern Width<br/>
-                <input id="width" name="width" type="range" min="1" max="20" value="6"></label><br/>
-            <label for="height">
-                Pattern Height<br/>
-                <input id="height" name="height" type="range" min="1" max="20" value="6"></label><br/>
-            <label for="bands">
-                # of Bands<br/>
-                <input id="bands" name="bands" type="range" min="3" max="4" value="3"></label><br/>
-            <label for="colors">
-                # of colors<br/>
-                <input id="colors" name="colors" type="range" min="1" max="5" value="3"></label></br>
-            <label for="empty">
-                Fill %<br/>
-                <input id="empty" name="empty" type="range" min="25" max="50" value="25"></label></br>
-            <label for="gray">
-                <input id="gray" name="gray" type="checkbox" checked>Grayscale?</label><br/>
+        <div id="flake-holder">
+            <canvas id="patcanvas1" width="10" height="10"></canvas>
+            <canvas id="reflectcanvas1" width="20" height="20"></canvas>
+            <canvas id="patcanvas2" width="10" height="10"></canvas>
+            <canvas id="reflectcanvas2" width="20" height="20"></canvas>
+        </div>
 
-            <button id="refresh" name="refresh">re-stitch</button>
-        </form>
+        <div id="knit">knit</div>
 
         <div id="sweater-container">
-            <div id="pattern-area"></div>
+            <div id="pattern-area">
+            </div>
         </div>
     </div>
     <script>

@@ -27,6 +27,7 @@ body {
     bottom: 0;
     left: 0;
     width: 450px;
+    height: 400px;
     margin: auto;
     background-position: center;
     background-size: 100%;
@@ -55,15 +56,6 @@ body {
     z-index: 1;
 }
 
-#control-panel {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 99;
-    background-color: #fff;
-    padding: 20px;
-}
-
 .band-container {
     display: table-row;
 }
@@ -83,4 +75,9 @@ body {
     image-rendering: pixelated;
     image-rendering: optimize-contrast;
     -ms-interpolation-mode: nearest-neighbor;
+}
+
+#knit {
+    display: inline-block;
+    cursor: pointer;
 }
