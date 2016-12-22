@@ -54,6 +54,12 @@ body {
     height: 270px;
     display: table;
     z-index: 1;
+
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .band-container {
@@ -67,8 +73,6 @@ body {
 
 .band {
     width: 44px;
-    pointer-events: none;
-    user-select: none;
 
     image-rendering: optimizeSpeed;
     image-rendering: -moz-crisp-edges;
@@ -88,9 +92,20 @@ body {
     z-index: 2;
     font-size: 0;
     cursor: pointer;
-    transition: transform 0.1s ease-in-out;
+    overflow: visible;
+    transition: transform 0.15s ease-out;
 }
 
-#knit-button:hover:not(.active) {
-    transform: scale(1.1);
+#knit-button .text {
+    transition: transform 0.15s ease-in;
+    transform-origin: center;
+}
+
+#knit-button:hover {
+    transform: scale(1.15);
+}
+
+#knit-button.active .text {
+    transition: transform 0.15s ease-out;
+    transform: scale(1.4);
 }

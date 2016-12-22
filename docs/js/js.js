@@ -41,7 +41,7 @@ $(document).ready(function() {
         setDOM();
         setTimeout(function() {
             $('#knit-button').removeClass('active');
-        }, 100);
+        }, 200);
     };
 
     setup = function() {
