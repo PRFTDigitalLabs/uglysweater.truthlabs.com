@@ -1,5 +1,4 @@
-body,
-html {
+body, html {
     margin: 0;
 }
 
@@ -33,12 +32,14 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("/img/sweater.png");
+
+    image-rendering: optimizeSpeed;
     image-rendering: -moz-crisp-edges;
     image-rendering: -o-crisp-edges;
     image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor;
     image-rendering: pixelated;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
 }
 
 #pattern-area {
@@ -79,10 +80,12 @@ body {
     background-position: center center;
     background-size: contain;
     text-align: center;
+
+    image-rendering: optimizeSpeed;
     image-rendering: -moz-crisp-edges;
     image-rendering: -o-crisp-edges;
     image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor;
     image-rendering: pixelated;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
 }
