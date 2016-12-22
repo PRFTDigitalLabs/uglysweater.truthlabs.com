@@ -67,6 +67,8 @@ body {
 
 .band {
     width: 44px;
+    pointer-events: none;
+    user-select: none;
 
     image-rendering: optimizeSpeed;
     image-rendering: -moz-crisp-edges;
@@ -77,7 +79,18 @@ body {
     -ms-interpolation-mode: nearest-neighbor;
 }
 
-#knit {
+#knit-button {
     display: inline-block;
+    position: absolute;
+    width: 150px;
+    top: calc(50% - 130px);
+    left: calc(50% - 350px);
+    z-index: 2;
+    font-size: 0;
     cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+#knit-button:hover:not(.active) {
+    transform: scale(1.1);
 }

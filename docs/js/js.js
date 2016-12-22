@@ -34,10 +34,14 @@ $(document).ready(function() {
     };
 
     knit = function() {
+        $('#knit-button').addClass('active');
         setup();
         randomizePattern(1);
         randomizePattern(2);
         setDOM();
+        setTimeout(function() {
+            $('#knit-button').removeClass('active');
+        }, 100);
     };
 
     setup = function() {
@@ -116,5 +120,5 @@ $(document).ready(function() {
     setDOM();
     firstRun = false;
 
-    $('#knit').on('click', knit);
+    $('#knit-button').on('click', knit);
 });
