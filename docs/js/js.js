@@ -1,24 +1,15 @@
 $(document).ready(function() {
-    var settings = {
-        width: 6,
-        height: 6,
-        bands: 3,
-        colors: 4,
-        empty: 50,
-        gray: false
-    };
-
-    var dataURL = [],
+    var settings = {},
+        dataURL = [],
         patcanvas = [],
-        reflectcanvas = [];
+        reflectcanvas = [],
+        colors,
+        paletteOptions = ['tol-dv', 'tol-sq', 'tol-rainbow', 'rainbow'];
 
     patcanvas[1] = $('#patcanvas1')[0];
     patcanvas[2] = $('#patcanvas2')[0];
     reflectcanvas[1] = $('#reflectcanvas1')[0];
     reflectcanvas[2] = $('#reflectcanvas2')[0];
-
-    var colors,
-        paletteOptions = ['tol-dv', 'tol-sq', 'tol-rainbow', 'rainbow'];
 
     getRandomIntInclusive = function(min, max) {
         min = Math.ceil(min);
@@ -53,7 +44,7 @@ $(document).ready(function() {
         settings.gray = $('#control-panel #gray')[0].checked ? true : false;
 
         if (settings.gray) {
-            colorPalette = palette.generate(function(x) { return palette.linearRgbColor(x, x, x); }, settings.colors, 1, 0)
+            colorPalette = ["ffffff", "E63D3D"];
         } else {
             colorPalette = palette(paletteOptions[Math.floor(Math.random() * paletteOptions.length)], settings.colors);
         }
