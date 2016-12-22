@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'BrownStd';
+  src: url('/fonts/BrownStd.eot?#iefix') format('embedded-opentype'),  url('/fonts/BrownStd.otf')  format('opentype'),
+	     url('/fonts/BrownStd.woff') format('woff'), url('/fonts/BrownStd.ttf')  format('truetype'), url('/fonts/BrownStd.svg#BrownStd') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'YoungSerif';
+    src: url('/fonts/YoungSerif.eot?#iefix') format('embedded-opentype'), url('/fonts/YoungSerif.woff') format('woff'), url('/fonts/YoungSerif.ttf') format('truetype'), url('/fonts/YoungSerif.svg#YoungSerif') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -5,6 +20,12 @@ body, html {
 
 body {
     background-color: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 16px;
+    font-family: "BrownStd", sans-serif;
 }
 
 .container {
@@ -13,6 +34,8 @@ body {
     right: 30px;
     bottom: 30px;
     left: 30px;
+    overflow-x: hidden;
+    overflow-y: scroll;
     background-color: #CDEAE7;
 }
 
@@ -22,7 +45,7 @@ body {
 
 #sweater-container {
     position: absolute;
-    top: 0;
+    top: 100px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -33,7 +56,6 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     background-image: url("/img/sweater.png");
-
     image-rendering: optimizeSpeed;
     image-rendering: -moz-crisp-edges;
     image-rendering: -o-crisp-edges;
@@ -54,12 +76,7 @@ body {
     height: 270px;
     display: table;
     z-index: 1;
-
     pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .band-container {
@@ -73,7 +90,6 @@ body {
 
 .band {
     width: 44px;
-
     image-rendering: optimizeSpeed;
     image-rendering: -moz-crisp-edges;
     image-rendering: -o-crisp-edges;
@@ -107,4 +123,14 @@ body {
 #knit-button.active .text {
     transition: transform 0.15s ease-out;
     transform: scale(1.4);
+}
+
+.title {
+    max-width: 300px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: "YoungSerif";
+    font-size: 36px;
+    color: #E22910;
+    text-shadow: 2px 2px #fff;
 }
