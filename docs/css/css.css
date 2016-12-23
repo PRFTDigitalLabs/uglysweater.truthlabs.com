@@ -193,6 +193,9 @@ a {
     position: absolute;
     top: 25px;
     right: 25px;
+    width: 200px;
+    text-align: right;
+    line-height: 20px;
 }
 
 #website {

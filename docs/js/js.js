@@ -1,5 +1,71 @@
 $(document).ready(function() {
-    var settings = {
+    var comments = [
+            "very flattering!",
+            "woof.",
+            "you’re drunk, Grandpa!!",
+            "where’d you get that? the toilet store?",
+            "that’s your pattern, definitely.",
+            "charming!",
+            "I don’t love it.",
+            "that’s a very sweet sweater.",
+            "everyone will be jealous!",
+            "you’re gonna like the way you look, i guarantee it.",
+            "BURN IT",
+            "ew",
+            "nope",
+            "yeah!",
+            "mmm…try again?",
+            "NAILED IT",
+            "no, no – it looks great!",
+            "you’re going to impress everyone.",
+            "i can’t keep my eyes off of you in that sweater!",
+            "damnnnnnnn",
+            "werk! werk!",
+            "that’s hugging you in allllll the right places.",
+            "oh gurrrl",
+            "mercy!",
+            "RING THE ALARM!",
+            "fabulous. just…fabulous.",
+            "show off.",
+            "that one’s only ok…gotta be honest.",
+            "cuuuuuuute!",
+            "awwww",
+            "gosh! that’s lovely!",
+            "not your best look.",
+            "LOL",
+            "so cuddly!",
+            "not even Macklemore would touch that one…",
+            "perfect.",
+            "stunning.",
+            "you’re gorgeous!",
+            "what a beautiful sweater!",
+            "did you knit that yourself? you’re crazy!",
+            "treat yoself!",
+            "you look good and you know it.",
+            "eh…this one’s a little embarrassing.",
+            "STRUT KWEEN",
+            "yyaaaassssssssssss",
+            "very nice.",
+            "c’mon you can do better…",
+            "mmm…not your color?",
+            "it works…but i don’t know why.",
+            "ugh!",
+            "UGH!",
+            "lovely!",
+            "you could wear this all year!",
+            "totally.",
+            "YUCK",
+            "gross",
+            "mmm…no",
+            "very unique!",
+            "that’s totally you.",
+            "how quaint!",
+            "where did you get that!?",
+            "i love it!",
+            "i adooooore you in that sweater!",
+            "is this gucci!?"
+        ],
+        settings = {
             width: 6,
             height: 6,
             bands: 4,
@@ -112,6 +178,9 @@ $(document).ready(function() {
 
         $('.band').attr('src', dataURL[1]);
         $('.band-container:nth-of-type(even) .band').attr('src', dataURL[2]);
+
+        var randComment = comments[Math.floor(Math.random() * comments.length)];
+        $("#comment").text(randComment);
     };
 
     setup();
