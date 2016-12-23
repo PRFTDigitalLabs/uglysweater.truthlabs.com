@@ -163,10 +163,6 @@ a {
     transform-origin: center;
 }
 
-#knit-button:hover {
-    transform: scale(1.15);
-}
-
 #knit-button.active .text {
     transition: transform 0.15s ease-out;
     transform: scale(1.4);
@@ -227,6 +223,10 @@ a {
 }
 
 @media (min-height: 651px) and (min-width: 901px) {
+    #knit-button:hover {
+        transform: scale(1.15);
+    }
+
     #website a:hover {
         color: #E22910 !important;
     }
@@ -252,7 +252,7 @@ a {
     }
 
     #title {
-        margin-top: 25px;
+        margin: 20px auto 30px auto;
         font-size: 28px;
         line-height: 32px;
     }
@@ -271,7 +271,7 @@ a {
     #knit-button {
         top: -50px;
         left: -30px;
-        transform: scale(0.6) !important;
+        transform: scale(0.6);
     }
 
     #website {
