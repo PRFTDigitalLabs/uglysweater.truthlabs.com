@@ -108,6 +108,12 @@ $(document).ready(function() {
         setTimeout(function() {
             $('#knit-button').removeClass('active');
         }, 200);
+
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'Button',
+            eventAction: 'knitSweater'
+        });
     };
 
     setup = function() {
