@@ -75,8 +75,6 @@ a {
     right: 30px;
     bottom: 30px;
     left: 30px;
-    overflow-x: hidden;
-    overflow-y: scroll;
     background-color: #CDEAE7;
 }
 
@@ -214,11 +212,13 @@ a {
 }
 
 @media (max-height: 650px), (max-width: 900px) {
+    body {
+        background-color: #CDEAE7;
+    }
+
     .container {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        position: static;
+        background-color: none;
     }
 
     #logo {
