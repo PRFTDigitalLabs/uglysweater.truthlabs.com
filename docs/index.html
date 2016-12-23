@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -46,6 +47,7 @@
     <script src="//google.github.io/palette.js/palette.js"></script>
     <script src="/js/js.js"></script>
 </head>
+
 <body>
     <div class="container">
         <div id="flake-holder">
@@ -55,7 +57,22 @@
             <canvas id="reflectcanvas2" width="20" height="20"></canvas>
         </div>
 
-        <div id="logo"><a href="http://truthlabs.com"><img src="/img/logo.png" alt="Truth Labs"></a></div>
+        <div class="snowflakes">
+            <div class="snowflake"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.84 40.9"><path d="M.004 11.98L11.982.002l11.98 11.978-11.98 11.978zM16.94 28.92l11.98-11.978L40.896 28.92 28.92 40.898zM45.857 0l11.978 11.98-11.978 11.977-11.98-11.978z"/></svg></div>
+            <div class="snowflake"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.84 40.9"><path d="M.004 11.98L11.982.002l11.98 11.978-11.98 11.978zM16.94 28.92l11.98-11.978L40.896 28.92 28.92 40.898zM45.857 0l11.978 11.98-11.978 11.977-11.98-11.978z"/></svg></div>
+            <div class="snowflake"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.84 40.9"><path d="M.004 11.98L11.982.002l11.98 11.978-11.98 11.978zM16.94 28.92l11.98-11.978L40.896 28.92 28.92 40.898zM45.857 0l11.978 11.98-11.978 11.977-11.98-11.978z"/></svg></div>
+            <div class="snowflake"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.84 40.9"><path d="M.004 11.98L11.982.002l11.98 11.978-11.98 11.978zM16.94 28.92l11.98-11.978L40.896 28.92 28.92 40.898zM45.857 0l11.978 11.98-11.978 11.977-11.98-11.978z"/></svg></div>
+            <div class="snowflake"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.84 40.9"><path d="M.004 11.98L11.982.002l11.98 11.978-11.98 11.978zM16.94 28.92l11.98-11.978L40.896 28.92 28.92 40.898zM45.857 0l11.978 11.98-11.978 11.977-11.98-11.978z"/></svg></div>
+            <div class="snowflake"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.84 40.9"><path d="M.004 11.98L11.982.002l11.98 11.978-11.98 11.978zM16.94 28.92l11.98-11.978L40.896 28.92 28.92 40.898zM45.857 0l11.978 11.98-11.978 11.977-11.98-11.978z"/></svg></div>
+            <div class="snowflake"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.84 40.9"><path d="M.004 11.98L11.982.002l11.98 11.978-11.98 11.978zM16.94 28.92l11.98-11.978L40.896 28.92 28.92 40.898zM45.857 0l11.978 11.98-11.978 11.977-11.98-11.978z"/></svg></div>
+            <div class="snowflake"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.84 40.9"><path d="M.004 11.98L11.982.002l11.98 11.978-11.98 11.978zM16.94 28.92l11.98-11.978L40.896 28.92 28.92 40.898zM45.857 0l11.978 11.98-11.978 11.977-11.98-11.978z"/></svg></div>
+            <div class="snowflake"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.84 40.9"><path d="M.004 11.98L11.982.002l11.98 11.978-11.98 11.978zM16.94 28.92l11.98-11.978L40.896 28.92 28.92 40.898zM45.857 0l11.978 11.98-11.978 11.977-11.98-11.978z"/></svg></div>
+            <div class="snowflake"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.84 40.9"><path d="M.004 11.98L11.982.002l11.98 11.978-11.98 11.978zM16.94 28.92l11.98-11.978L40.896 28.92 28.92 40.898zM45.857 0l11.978 11.98-11.978 11.977-11.98-11.978z"/></svg></div>
+        </div>
+
+        <div id="logo">
+            <a href="http://truthlabs.com"><img src="/img/logo.png" alt="Truth Labs"></a>
+        </div>
         <div id="title">Happy holidays,<br>stay toasty!</div>
         <div id="comment"></div>
 
@@ -70,20 +87,21 @@
         </div>
     </div>
     <script>
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-78974568-3', 'auto');
-    ga('send', 'pageview');
+        ga('create', 'UA-78974568-3', 'auto');
+        ga('send', 'pageview');
     </script>
 </body>
+
 </html>

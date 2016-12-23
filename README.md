@@ -3,6 +3,7 @@ http://uglysweater.truthlabs.com
 
 ##Uses:
 - https://github.com/google/palette.js
+- https://github.com/pajasevi/CSSnowflakes
 - https://jquery.com/
 
 ##Influenced by:

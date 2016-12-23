@@ -1,52 +1,43 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
+
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 @font-face {
-  font-family: 'BrownStd';
-  src: url('/fonts/BrownStd.eot?#iefix') format('embedded-opentype'),  url('/fonts/BrownStd.otf')  format('opentype'),
-	     url('/fonts/BrownStd.woff') format('woff'), url('/fonts/BrownStd.ttf')  format('truetype'), url('/fonts/BrownStd.svg#BrownStd') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'BrownStd';
+    src: url('/fonts/BrownStd.eot?#iefix') format('embedded-opentype'), url('/fonts/BrownStd.otf') format('opentype'), url('/fonts/BrownStd.woff') format('woff'), url('/fonts/BrownStd.ttf') format('truetype'), url('/fonts/BrownStd.svg#BrownStd') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
@@ -225,15 +216,151 @@ a {
     fill: #2B14B2;
 }
 
+.snowflake {
+    color: #fff;
+    font-size: 1em;
+    text-shadow: 0 0 1px #000;
+	position: relative;
+}
+
+@-webkit-keyframes snowflakes-fall {
+    0% {
+        top: -10%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@-webkit-keyframes snowflakes-shake {
+    0% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+    50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px);
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+
+@keyframes snowflakes-fall {
+    0% {
+        top: -10%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes snowflakes-shake {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(80px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.snowflake {
+    position: fixed;
+    top: -10%;
+	z-index: -1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+    -webkit-animation-duration: 8s, 8s;
+    -webkit-animation-timing-function: linear, ease-in-out;
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-play-state: running, running;
+    animation-name: snowflakes-fall, snowflakes-shake;
+    animation-duration: 8s, 8s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-play-state: running, running;
+}
+
+.snowflake svg {
+	width: 16px;
+	fill: #fff;
+}
+
+.snowflake:nth-of-type(0) {
+    left: 1%;
+    -webkit-animation-delay: 0s, 0s;
+    animation-delay: 0s, 0s;
+}
+
+.snowflake:nth-of-type(1) {
+	left: 10%;
+	-webkit-animation-delay: 3s, 2s;
+    animation-delay: 3s, 2s;
+}
+
+.snowflake:nth-of-type(2) {
+	left: 20%;
+	-webkit-animation-delay: 7s, 1s;
+	animation-delay: 7s, 1s;
+}
+
+.snowflake:nth-of-type(3) {
+    left: 30%;
+    -webkit-animation-delay: 4s, 2s;
+    animation-delay: 4s, 2s;
+}
+
+.snowflake:nth-of-type(4) {
+    left: 40%;
+    -webkit-animation-delay: 8s, 0.5s;
+	animation-delay: 8s, 0.5s;
+}
+
+.snowflake:nth-of-type(5) {
+    left: 50%;
+    -webkit-animation-delay: 5s, 3s;
+    animation-delay: 5s, 3s;
+}
+
+.snowflake:nth-of-type(6) {
+    left: 60%;
+    -webkit-animation-delay: 2s, 2s;
+    animation-delay: 2s, 2s;
+}
+
+.snowflake:nth-of-type(7) {
+    left: 70%;
+    -webkit-animation-delay: 6s, 1s;
+    animation-delay: 6s, 1s;
+}
+
+.snowflake:nth-of-type(8) {
+    left: 80%;
+    -webkit-animation-delay: 1s, 0s;
+    animation-delay: 1s, 0s;
+}
+
+.snowflake:nth-of-type(9) {
+    left: 90%;
+    -webkit-animation-delay: 5s, 1.5s;
+    animation-delay: 5s, 1.5s;
+}
+
 @media (min-height: 651px) and (min-width: 901px) {
     #knit-button:hover {
         transform: scale(1.15);
     }
-
     #website a:hover {
         color: #E22910 !important;
     }
-
     #social a:hover svg {
         fill: #E22910;
     }
@@ -243,46 +370,38 @@ a {
     body {
         background-color: #CDEAE7;
     }
-
     .container {
         position: static;
-        background-color: none;
+        background-color: transparent;
     }
-
     #logo {
         position: static;
         margin: 20px auto;
     }
-
     #title {
         margin: 20px auto 30px auto;
         font-size: 28px;
         line-height: 32px;
     }
-
     #comment {
         display: none;
     }
-
     #sweater-container {
         position: relative;
         top: 0;
         width: 300px;
         height: 267px;
     }
-
     #knit-button {
         top: -50px;
         left: -30px;
         transform: scale(0.6);
     }
-
     #website {
         position: static;
         text-align: center;
         margin: 30px 20px 15px 20px;
     }
-
     #social {
         position: static;
         text-align: center;
