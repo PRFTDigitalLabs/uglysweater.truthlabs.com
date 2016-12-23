@@ -57,11 +57,8 @@ table {
 }
 
 body {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     background-color: #fff;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     font-size: 16px;
     font-family: "BrownStd", sans-serif;
     color: #2B14B2;
@@ -69,7 +66,7 @@ body {
 
 a {
     text-decoration: none !important;
-    color: inherit !important;
+    color: #2B14B2 !important;
 }
 
 .container {
@@ -119,7 +116,10 @@ a {
     width: 68.6%;
     display: table;
     z-index: 1;
-    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .band-container {
