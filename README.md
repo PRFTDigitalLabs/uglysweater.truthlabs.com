@@ -1,10 +1,10 @@
-#Truth Labs' Ugly Sweater Generator
+# Truth Labs' Ugly Sweater Generator
 http://uglysweater.truthlabs.com
 
-##Uses:
+## Uses:
 - https://github.com/google/palette.js
 - https://github.com/pajasevi/CSSnowflakes
 - https://jquery.com/
 
-##Influenced by:
+## Influenced by:
 - http://www.patternify.com/ (https://github.com/SachaG/Patternify)
